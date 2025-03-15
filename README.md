@@ -12,7 +12,7 @@ Par ailleurs, une extension des catégories d’articles est prévue, impliquant
 - ✅ Mettre en place une **classification supervisée** d’images.
 - ✅ Optimiser le modèle avec des techniques de **data augmentation**.
 - ✅ Extraire et structurer des données via l’**API OpenFood Facts**.
-- ✅ Présenter les résultats sous forme de **slides (PDF, max 30 pages)**.
+- ✅ Présenter les résultats sous forme de **slides**.
 
 ## 🛠️ Étapes du Projet
 
@@ -36,13 +36,12 @@ Par ailleurs, une extension des catégories d’articles est prévue, impliquant
   - `foodId, label, category, foodContentsLabel, image`
 
 ### 4️⃣ **Présentation et Justification des Résultats**
-- Structuration d’une **présentation (30 slides max, PDF)** :
+- Structuration d’une **présentation** :
   - Objectifs et problématique
   - Analyse exploratoire et extraction de features
   - Implémentation du modèle de classification
   - Résultats et interprétation
   - Test de l’API OpenFood Facts
-- Préparation aux **questions techniques** pour la soutenance.
 
 ## 📦 Livrables Attendus
 - ✅ Un **notebook exploratoire** sur la faisabilité du moteur de classification.
@@ -52,7 +51,7 @@ Par ailleurs, une extension des catégories d’articles est prévue, impliquant
 - ✅ Un **modèle de classification supervisée** d’images.
 - ✅ Un **notebook/script Python** pour l’extraction de données via API.
 - ✅ Un **fichier CSV** contenant les produits collectés.
-- ✅ Une **présentation détaillée** des résultats (30 slides max, PDF).
+- ✅ Une **présentation détaillée** des résultats.
 
 ## 🚀 Objectif Final
 Déterminer si les **descriptions textuelles et les images** permettent de **classifier automatiquement** les articles de la marketplace, en vue d’un moteur de classification à grande échelle.
