@@ -1,63 +1,62 @@
 ![Entete](images/projet.png)
 
-# 📌 Préparation des Données pour un Organisme de Santé Publique
+# 📌 Étude et Implémentation d’un Moteur de Classification d’Articles
 
 ## 📖 Contexte
-L'agence **Santé publique France** souhaite améliorer la base de données **Open Food Facts**, qui fournit des informations nutritionnelles sur divers produits alimentaires. Actuellement, la saisie des données est manuelle, ce qui entraîne des erreurs et des valeurs manquantes.
+L’entreprise **Place du Marché**, une marketplace e-commerce, souhaite automatiser l’**attribution des catégories d’articles** en s’appuyant sur les **descriptions textuelles et les images** des produits. Après une **étude de faisabilité**, l’objectif est désormais de **mettre en place un modèle de classification supervisée** basé sur les images et d’optimiser sa performance grâce à la **data augmentation**.
 
-L'objectif du projet est d'explorer et de nettoyer les données pour évaluer la **faisabilité d'un système de suggestion automatique** des valeurs manquantes.
+Par ailleurs, une extension des catégories d’articles est prévue, impliquant une collecte de nouveaux produits via l’**API OpenFood Facts**.
 
 ## 🎯 Objectifs du Projet
-- ✅ Nettoyer et explorer les données de **Open Food Facts**.
-- ✅ Identifier et traiter les **valeurs aberrantes** et **valeurs manquantes**.
-- ✅ Réaliser une **analyse univariée et bivariée** des données.
-- ✅ Examiner la faisabilité d’un **système de complétion automatique**.
-- ✅ Vérifier la conformité du projet avec les **principes du RGPD**.
+- ✅ Étudier la **faisabilité** d’un moteur de classification automatique.
+- ✅ Mettre en place une **classification supervisée** d’images.
+- ✅ Optimiser le modèle avec des techniques de **data augmentation**.
+- ✅ Extraire et structurer des données via l’**API OpenFood Facts**.
+- ✅ Présenter les résultats sous forme de **slides (PDF, max 30 pages)**.
 
 ## 🛠️ Étapes du Projet
 
-### 1️⃣ **Nettoyage et Filtrage des Données**
-- Identifier les **features pertinentes** (quantitatives et qualitatives).
-- Sélectionner une variable cible avec plus de **50% de valeurs manquantes**.
-- Supprimer les **doublons** et les entrées incomplètes.
-- Automatiser le nettoyage pour garantir la **réutilisabilité** du code.
+### 1️⃣ **Étude de Faisabilité du Moteur de Classification**
+- **Prétraitement des données** (nettoyage du texte, transformation des images).
+- **Extraction de features** :
+  - Texte : **Bag-of-Words, TF-IDF, Word2Vec, BERT, Universal Sentence Encoder**.
+  - Images : **SIFT, ORB, CNN Transfer Learning**.
+- **Réduction de dimension** (PCA, t-SNE, UMAP) pour visualisation des catégories.
+- **Analyse de regroupement automatique** et validation de la faisabilité.
 
-### 2️⃣ **Identification et Traitement des Valeurs Aberrantes**
-- Détection par **visualisation** (boxplots, histogrammes, scatter plots).
-- Utilisation de méthodes statistiques :
-  - Plage interquartile (IQR), écart-type, etc.
-- Traitement des valeurs aberrantes : suppression, remplacement ou catégorisation.
+### 2️⃣ **Implémentation de la Classification Supervisée**
+- Utilisation d’un **modèle CNN (TensorFlow/Keras ou PyTorch)**.
+- Expérimentation avec **data augmentation** (rotation, zoom, modification du contraste).
+- Évaluation avec des **métriques de classification** (accuracy, F1-score).
 
-### 3️⃣ **Gestion des Valeurs Manquantes**
-- Analyse des motifs de valeurs manquantes (**aléatoires ou systématiques**).
-- Sélection de la meilleure méthode d’imputation :
-  - **Statistiques** : moyenne, médiane, mode.
-  - **Modèles avancés** : KNN, régression linéaire.
+### 3️⃣ **Extraction de Données via l’API OpenFood Facts**
+- Accès et requêtage de l’**API OpenFood Facts**.
+- Récupération des **10 premiers produits contenant “champagne”**.
+- Sauvegarde des données sous format **CSV** :
+  - `foodId, label, category, foodContentsLabel, image`
 
-### 4️⃣ **Analyse Univariée et Bivariée**
-- Étude des **distributions** des variables via histogrammes et boxplots.
-- Identification des **corrélations** entre les variables via :
-  - Matrices de corrélation, scatter plots.
-- Sélection des variables ayant une influence sur la cible.
-
-### 5️⃣ **Analyse Multivariée et Sélection des Variables**
-- Visualisation avancée : PCA, ACP, ANOVA.
-- Sélection des meilleures features pour un modèle de suggestion automatique.
-
-### 6️⃣ **Présentation et Respect du RGPD**
-- Explication des méthodes utilisées et des conclusions.
-- Justification de la conformité aux **5 principes du RGPD**.
-- Production d’une présentation claire pour un **public non technique**.
+### 4️⃣ **Présentation et Justification des Résultats**
+- Structuration d’une **présentation (30 slides max, PDF)** :
+  - Objectifs et problématique
+  - Analyse exploratoire et extraction de features
+  - Implémentation du modèle de classification
+  - Résultats et interprétation
+  - Test de l’API OpenFood Facts
+- Préparation aux **questions techniques** pour la soutenance.
 
 ## 📦 Livrables Attendus
-- ✅ Un **notebook Jupyter** documenté avec le processus de nettoyage et d’analyse.
-- ✅ Un **dataset propre et structuré**.
-- ✅ Des **visualisations graphiques** pour illustrer l’analyse.
-- ✅ Une **présentation détaillée** expliquant la faisabilité du projet.
+- ✅ Un **notebook exploratoire** sur la faisabilité du moteur de classification.
+- ✅ Des **visualisations 2D** illustrant la séparation des catégories.
+- ✅ Une **analyse comparative** des différentes méthodes utilisées.
+- ✅ Une **conclusion** sur la faisabilité du moteur de classification.
+- ✅ Un **modèle de classification supervisée** d’images.
+- ✅ Un **notebook/script Python** pour l’extraction de données via API.
+- ✅ Un **fichier CSV** contenant les produits collectés.
+- ✅ Une **présentation détaillée** des résultats (30 slides max, PDF).
 
 ## 🚀 Objectif Final
-Démontrer qu'il est possible d'améliorer la saisie des données d’**Open Food Facts** en développant un **système de suggestion automatique**, tout en respectant les normes du **RGPD** et en garantissant des données fiables.
+Déterminer si les **descriptions textuelles et les images** permettent de **classifier automatiquement** les articles de la marketplace, en vue d’un moteur de classification à grande échelle.
 
 ---
-- 👥 **Compétences requises** : Python, Pandas, Analyse de données, Visualisation.
-- 🌍 **Source des données** : Open Food Facts.
+- 👥 **Compétences requises** : NLP, Computer Vision, Deep Learning, API REST, Machine Learning.
+- 🌍 **Technologies** : Python, Sklearn, BERT, TensorFlow/Keras, PyTorch, OpenCV, Pandas, OpenFood Facts API.
